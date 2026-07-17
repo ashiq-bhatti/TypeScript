@@ -5,6 +5,9 @@ import { Status } from "./components/status";
 import { Heading } from "./components/heading";
 import Button from "./components/button";
 import Input from "./components/input";
+import Style from "./components/style";
+import Loggedin from "./components/State/Loggedin";
+import User from "./components/State/User";
 
 function App() {
   const personName = {
@@ -62,6 +65,16 @@ function App() {
           handeOnClick={(event, id) => console.log("Button cliked", event, id)}
         />
         <Input value="" handleOnChange={(event) => console.log(event)} />
+      </fieldset>
+      <fieldset>
+        <legend>Style Props</legend>
+        <Style style={{border:'1px solid red', padding:'7px'}} />
+      </fieldset>
+       <fieldset>
+        <legend>UseState Hook</legend>
+        <Loggedin  />
+        <hr />
+        <User/>
       </fieldset>
     </div>
   );
